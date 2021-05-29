@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <div id="col_1" class="col-1">
+        <section class="contenedor">
+           <div class="color-naranja" id="mismo">
+                <p>HTML</p>
+           </div>
+        </section>
+        <section class="contenedor">
+            <div class="azul-marino" id="mismo">
+                <img class="caja" src="images/caja.png">
+           </div>
+        </section>
+    </div>
+
+    <div id="col_2" class="col-2">
+        <section id="eliminar1">
+
+        </section>
+        <section class="contenedor">
+            <div class="color-amarillo" id="mismo">
+                <p class="letra_grande">JS</p>
+            </div>
+         </section>
+         <section class="contenedor">
+             <div class="naranja-fluorecente" id="mismo">
+                <img class="caja" src="images/una.png">
+            </div>
+         </section>
+    </div>
+
+    <div id="col_3" class="col-3">
+        <section id="eliminar3">
+
+        </section>
+        <section class="contenedor">
+            <div class="morado" id="mismo">
+                <p class="letra_grande">10</p>
+            </div>
+        </section>
+        <section id="eliminar4">
+            
+        </section>
+
+    </div>
+
+    <div id="col2_2" class="col-2"> 
+        <div id="eliminar2">
+
+        </div>
+        <section class="contenedor">
+            <div class="verde" id="mismo">
+                <img class="caja" src="images/cromo.png">
+            </div>
+         </section>
+         <section class="contenedor">
+             <div class="azul-bajo" id="mismo">
+                <img class="caja" src="images/atomo.png">
+            </div>
+         </section>
+    </div>
+
+    <div id="col1_1" class="col-1">
+        <section class="contenedor">
+            <div class="azul-2" id="mismo">
+                <p>{CSS}</p>
+            </div>
+         </section>
+         <section class="contenedor">
+             <div class="naranja-fluorecente" id="mismo">
+                <img class="caja" src="images/molecular.png">
+            </div>
+         </section>
+    </div>
+
+    <script>
+        window.addEventListener("resize",anchoPagina());
+        window.addEventListener('resize', (event)=>{location.reload();});
+        function anchoPagina(){            
+            if(window.innerWidth<900){
+                const col_2=document.getElementById("col_2");
+                const eliminar1=document.getElementById("eliminar1");
+                col_2.removeChild(eliminar1);
+
+                const col2_2=document.getElementById("col2_2");
+                const eliminar2=document.getElementById("eliminar2");
+                col2_2.removeChild(eliminar2);
+
+                const col_3=document.getElementById("col_3");
+                const eliminar3=document.getElementById("eliminar3");
+                col_3.removeChild(eliminar3);
+                col_3.removeChild(eliminar4);
+            } 
+        }
+        
+
+    </script>
+</body>
+</html>
